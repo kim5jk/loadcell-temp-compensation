@@ -1,0 +1,66 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "loadcell-temp-compensation"
+version = "1.0.0"
+authors = [
+    { name = "Jueseok Kim", email = "kimjue@mail.uc.edu" }
+]
+description = "Temperature compensation for load cell measurements using segment-based linear regression"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+keywords = [
+    "load cell",
+    "temperature compensation",
+    "sensor drift",
+    "signal processing",
+    "measurement",
+    "calibration",
+]
+dependencies = [
+    "numpy>=1.20.0",
+    "pandas>=1.3.0",
+    "scipy>=1.7.0",
+    "statsmodels>=0.13.0",
+]
+
+[project.optional-dependencies]
+viz = ["plotly>=5.0.0"]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "black>=23.0.0",
+    "flake8>=6.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/kim5jk/loadcell-temp-compensation"
+Documentation = "https://github.com/kim5jk/loadcell-temp-compensation#readme"
+Repository = "https://github.com/kim5jk/loadcell-temp-compensation.git"
+Issues = "https://github.com/kim5jk/loadcell-temp-compensation/issues"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
