@@ -9,6 +9,8 @@ A Python library for compensating temperature-induced drift in load cell measure
 
 ![Temperature Compensation Demo](docs/demo.png)
 
+<!-- If image doesn't load, view it at: https://raw.githubusercontent.com/kim5jk/loadcell-temp-compensation/main/docs/demo.png -->
+
 ## 🎯 Key Results
 
 | Metric | Value |
